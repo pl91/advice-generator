@@ -25,6 +25,7 @@ body {
     min-height: 100vh;
     background-color: #202733;
     padding: 0 1.6rem;
+    padding-bottom: 18rem;
     font-family: 'Manrope', sans-serif;
 }
 
@@ -39,7 +40,6 @@ body {
     gap: 2.4rem;
     box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
     border-radius: 10px;
-
 }
 
 .advice-id {

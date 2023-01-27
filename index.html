@@ -8,9 +8,40 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-  
-  <script src="app.js"></script>
+  <div class="dictionary">
+    <header class="dictionary__header">
+      <img src="assets/images/logo.svg" alt="" class="logo">
+      <div class="dictionary__settings">
+        <div class="font-selector" id="font-selector">
+          <button class="btn font-selector__btn" id="font-selector__btn"><span id="current-selection">Sans-Serif</span>
+            <img src="assets/images/icon-arrow-down.svg" alt="down arrow" class="font-selector__icon" id="font-selector__icon">
+          </button>
+          <div class="dropdown" id="dropdown">
+            <ul class="dropdown__content">
+              <li class="dropdown__item" id="inter, sans-serif">Sans-serif</li>
+              <li class="dropdown__item" id="lora, serif">Serif</li>
+              <li class="dropdown__item" id="inconsolata, mono">Mono</li>
+            </ul>
+          </div>
+        </div>
+        <div class="theme-toggler">
+          <input type="checkbox" class="checkbox" id="checkbox">
+          <label for="checkbox" class="label">
+            <div class="ball"></div>
+          </label>
+        </div>
+        <img src="assets/images/icon-moon.svg" alt="moon icon">
+      </div>
+    </header>
+    <form class="form" id="form" method="get">
+      <label for="form__search"></label>
+      <input type="search" name="form__search" id="form__search">
+    </form>
+
+    <p class="description" id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi facere eveniet cum magnam ex eaque perspiciatis impedit possimus obcaecati hic?</p>
+  <script src="index.js"></script>
 </body>
 
 </html>

@@ -4,87 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dictionary Web App</title>
+  <title>Advice Generator</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="dictionary" id="dictionary">
-    <header class="dictionary__header">
-      <img src="assets/images/logo.svg" alt="" class="logo">
-      <div class="dictionary__settings">
-        <div class="font-selector" id="font-selector">
-          <button class="btn" id="font-selector__btn"><span class="current-selection" id="current-selection">Sans-Serif</span>
-          </button>
-          <div class="dropdown visually-hidden" id="dropdown">
-            <ul class="dropdown__content">
-              <li class="dropdown__item" id="inter, sans-serif">Sans-serif</li>
-              <li class="dropdown__item" id="lora, serif">Serif</li>
-              <li class="dropdown__item" id="inconsolata, mono">Mono</li>
-            </ul>
-          </div>
-        </div>
-        <div class="theme-toggler">
-          <input type="checkbox" class="checkbox" id="checkbox">
-          <label for="checkbox" class="label">
-            <div class="ball"></div>
-          </label>
-        </div>
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"/></svg>
-      </div>
-    </header>
-    <form class="form" id="form">
-      <label for="form__search" class="visually-hidden">Search for any word</label>
-      <input type="search" name="form__search" id="form__search" placeholder="Search for any word..." >
-      <button id="form__search-button"><img src="./assets/images/icon-search.svg" alt="search-icon"></button>
-    </form>
-    <main class="results">
-      <header>
-        <div class="results__heading">
-          <h1 class="heading-1" id="results__word">keyboard</h1>
-          <div class="phonetics" id="results__phonetics">/ˈkiːbɔːd/</div>
-        </div>
-        <button id="results__button" class="visually-hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75"><g fill="#A445ED" fill-rule="evenodd"><circle cx="37.5" cy="37.5" r="37.5" opacity=".25"/> <path d="M29 27v21l21-10.5z"/></g></svg>
-        </button>
-      </header>
-      <!-- results noun section -->
-      <section class="results__body" id="results__noun">
-        <h2 class="heading-2">noun</h2>
-        <h3 class="heading-3">Meaning</h3>
-        <p class="body">
-          (etc.) A set of keys used to operate a typewriter, computer etc.
-        </p>
-        <p class="body">
-          A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.
-        </p>
-        <p class="body">
-          A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.
-        </p>
-        <div class="results__synonyms">
-          <h3 class="heading-3">Synonems</h3>
-          <a href="#" id="results__synonym">electronic keyboard</a>
-        </div>
-      </section>
-      <!-- results verb section -->
-      <section class="results__body" id="result__verb">
-        <h2 class="heading-2">verb</h2>
-        <h3 class="heading-3">Meaning</h3>
-        <p class="body">
-          To type on a computer keyboard.
-        </p>
-        <p class="quote">
-          “Keyboarding is the part of this job I hate the most.”
-        </p>
-      </section>
-    </main>
-    <footer class="dictionary__footer">
-      <h4 class="heading-4">Source</h4>
-      <a class="link" id="dictionary__link" href="#">https://en.wiktionary.org/wiki/keyboard</a>
-    </footer>
+  <div class="advice-generator">
+    <h1 id="advice-id" class="advice-id">Advice #</h1>
+    <p id="advice-text" class="advice-text">Welcome to our random advice generator app! Here you can get a fresh
+      perspective on any situation by receiving a completely random piece of advice.</p>
+    <picture>
+      <source media="(min-width: 650px)" srcset="images/pattern-divider-desktop.svg">
+      <img src="images/pattern-divider-mobile.svg" alt="divider" class="divider">
+    </picture>
+    <div class="img-box">
+      <img src="images/icon-dice.svg" alt="dice icon" id="dice-icon" class="dice-icon">
+    </div>
   </div>
-  <script src="index.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
